@@ -18,7 +18,7 @@ before_install:
 
 install:
 
-- $SH 'git clone https://'"$GIT_USERNAME"':'"$GIT_PASSWORD"'@github.com/marinadezordi/dssat-csm.git'
+- $SH 'git clone https://'"$GIT_USERNAME"':'"$GIT_PASSWORD"'@github.com/marinadezordi/dssat-csm-os.git'
 - $SH 'cp -r Data/* dssat-csm/Data'
 - $SH "cd dssat-csm && git checkout develop && mkdir build"
 - $SH "cd dssat-csm/build && cmake -DCMAKE_Fortran_COMPILER=/usr/bin/gfortran-8 -DCMAKE_INSTALL_PREFIX=/DSSAT47/A .. && make -j3 && make install"
