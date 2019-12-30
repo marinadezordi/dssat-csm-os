@@ -9,7 +9,6 @@ pipeline {
 			stage('CI'){
 				agent{
 					docker{
-						reuseNode false
 						image 'ubuntu'
 					}
 				}
