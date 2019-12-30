@@ -2,7 +2,9 @@ pipeline {
 	agent any 
 		stages {
 			stage('One'){
-				echo "Hi, this is Marina from Mosaico"
+				steps{
+					echo "Hi, this is Marina from Mosaico"
+				}
 			}
 			stage('CI'){
 				agent{
