@@ -1,21 +1,10 @@
 pipeline {
-	agent any
-		stages {
-			stage('One'){
-				steps{
-					echo "Hi, this is Marina from Mosaico"
-				}
-			}
-			stage('CI'){
-				agent{
-					docker{
-						args '--privileged'
-						image 'ubuntu'
-					}
-				}
-				steps{
-					echo "Running the integration test.."
-				}
-			}
-		} 	
+    agent { docker { image 'maven:3.3.3' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
 }
