@@ -11,6 +11,8 @@ pipeline {
 					docker{
 						reuseNode false
 						image 'ubuntu'
+						args '--privileged'
+						
 					}
 				}
 				steps{
