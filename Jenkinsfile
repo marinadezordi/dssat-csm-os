@@ -9,10 +9,8 @@ pipeline {
 			stage('CI'){
 				agent{
 					docker{
-						reuseNode false
-						image 'ubuntu'
 						args '--privileged'
-						
+						image 'ubuntu'
 					}
 				}
 				steps{
