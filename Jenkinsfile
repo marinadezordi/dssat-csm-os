@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker { image 'debian' } }
+    agent { docker { image 'ubuntu' } }
     stages {
         stage('build') {
             steps {
