@@ -10,7 +10,7 @@ pipeline {
 				agent{
 					 docker{
 						reuseNode false
-						image 'marinadezordi:1.0'
+						image 'marinadezordi/imagercroptest:1.0'
 					}
 				}
 				steps{
