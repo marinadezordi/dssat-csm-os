@@ -14,7 +14,7 @@ pipeline {
 					}
 				}
 				steps{
-					sh 'git clone https:github.com/marinadezordi/dssat-csm-os.git'
+					sh 'git clone https://github.com/marinadezordi/dssat-csm-os.git'
 				}
 			}
 
