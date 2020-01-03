@@ -14,7 +14,7 @@ pipeline {
 					}
 				}
 				steps{
-					sh 'git clone https://'"$GIT_USERNAME"':'"$GIT_PASSWORD"'@github.com/marinadezordi/dssat-csm.git'
+					sh 'git clone https:github.com/marinadezordi/dssat-csm-os.git'
 				}
 			}
 
