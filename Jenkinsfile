@@ -7,12 +7,12 @@ pipeline {
                 }
 			}
 			stage('CI'){
-				agent{
-					docker{
+				//agent{
+					 docker.withTool('docker'){
 						reuseNode false
 						image 'ubuntu'
 					}
-				}
+				//}
 				steps{
 					echo 'Running the integration test..'
 				}
