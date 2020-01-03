@@ -14,7 +14,7 @@ pipeline {
 					}
 				}
 				steps{
-					echo 'Running the integration test..'
+					sh 'git clone https://'"$GIT_USERNAME"':'"$GIT_PASSWORD"'@github.com/marinadezordi/dssat-csm.git'
 				}
 			}
 
