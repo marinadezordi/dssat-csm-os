@@ -10,7 +10,7 @@ pipeline {
 				agent{
 					 docker{
 						reuseNode false
-						image 'ubuntu'
+						image 'marinadezordi:1.0'
 					}
 				}
 				steps{
