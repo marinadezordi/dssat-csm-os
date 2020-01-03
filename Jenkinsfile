@@ -9,7 +9,7 @@ pipeline {
 			stage('CI'){
 				agent{
 					 docker{
-						 docker.withTool('docker'){
+						withTool('docker'){
 						image 'ubuntu'
 						 }
 						 reuseNode false
