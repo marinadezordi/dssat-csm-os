@@ -14,7 +14,7 @@ pipeline {
 						image 'ubuntu'
 						 }
 					}
-				//}
+				}
 				steps{
 					echo 'Running the integration test..'
 				}
