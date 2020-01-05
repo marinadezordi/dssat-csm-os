@@ -22,7 +22,7 @@ pipeline {
 					sh 'cd dssat-csm-os && git checkout ${BRANCH_NAME} && rm -rf build && mkdir build'
 					sh 'cd dssat-csm-os/build && cmake -DCMAKE_Fortran_COMPILER=/usr/bin/gfortran-8 -DCMAKE_INSTALL_PREFIX=/DSSAT47/B .. && make -j3 && make install'
 					//sh 'cd /DSSAT47/A/ci && ../run_dssat B AllCrops.v47'
-					sh 'ls /DSSAT47/A/ci'
+					sh 'ls /DSSAT47/A'
 					sh 'cd /DSSAT47/B/ci && ../run_dssat B AllCrops.v47'
 					sh 'cd /home/test && Rscript citest.R'
 				}
