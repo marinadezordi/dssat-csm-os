@@ -14,7 +14,7 @@ pipeline {
 					}
 				}
 				steps{
-					sh 'cd /home/cidssat/'
+					sh 'cd /home/cidssat/ && rm -rf dssat-csm-os'
 					sh 'git clone https://github.com/marinadezordi/dssat-csm-os.git'
 					sh 'cp -r Data/* dssat-csm-os/Data'
 					sh 'cd dssat-csm-os && git checkout develop && mkdir build'
