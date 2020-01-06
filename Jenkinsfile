@@ -16,7 +16,7 @@ pipeline {
 				steps{
 					sh 'cd /home/cidssat/ '
 					sh 'rm -rf dssat-csm-os && git clone https://github.com/marinadezordi/dssat-csm-os.git'
-					sh 'cp -r Data/* dssat-csm-os/Data && ls dssat-csm-os/Data'
+					sh 'cp -r Data/* dssat-csm-os/Data && ls dssat-csm-os'
 					sh 'cd dssat-csm-os && git checkout develop && mkdir build'
 					sh 'cd build && cmake -DCMAKE_Fortran_COMPILER=/usr/bin/gfortran-8 -DCMAKE_INSTALL_PREFIX=/DSSAT47/A .. && make -j3 && make install'
 					sh 'cd /home/cidssat/dssat-csm-os && git checkout ${BRANCH_NAME} && rm -rf build && mkdir build'
